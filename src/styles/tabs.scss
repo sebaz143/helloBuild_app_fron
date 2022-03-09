@@ -1,0 +1,37 @@
+.tabs-component {
+  border-bottom: solid 1px #ffffff;
+  font-weight: 300;
+  height: 68px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+
+  .tabs-container {
+    display: flex;
+    align-items: flex-end;
+
+    .tab-element {
+      height: 44px;
+      width: 160px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #000000;
+      line-height: 26px;
+      border-bottom: solid 2px transparent;
+      cursor: pointer;
+    }
+
+    .selected {
+      border-bottom: solid 2px #ffffff;
+      color: #ffffff;  
+      font-weight: 400;   
+    }
+  }
+
+  .tabs-cta {
+    margin: auto 0;
+    display: flex;
+    gap: 12px;
+  }
+}

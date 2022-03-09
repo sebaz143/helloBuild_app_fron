@@ -1,0 +1,135 @@
+.table-title {
+  line-height: 22px;
+  font-size: 18px;
+  margin-bottom: 16px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.table-empty-state {
+  border: solid 1px #cccccc;
+  box-sizing: border-box;
+  background-color: white;
+  padding: 40px;
+  font-size: 16px;
+  font-weight: 300;
+  border-radius: 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.component-table {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 16px;
+
+  &__header {
+    border: solid 1px #cccccc;
+    box-sizing: border-box;
+    background-color: white;
+    padding: 14px 40px;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 8px;
+  
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-auto-flow: column;
+    align-items: center;
+    grid-gap: 16px;
+
+    a {
+      grid-row: 1;
+      box-sizing: border-box;
+      overflow: hidden;
+      word-wrap: break-word;
+      user-select: none;
+      padding: 4px 0;
+  
+      &.sortable {
+        height: 100%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-right: 4px;
+        flex-wrap: nowrap;
+        border-radius: 4px;
+
+        &:hover {
+          background-color: #f0f0f0;
+        }
+      }
+
+      .arrow-up {
+        width: 0; 
+        height: 0; 
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        
+        border-bottom: 5px solid black;
+      }
+
+      .arrow-down {
+        width: 0; 
+        height: 0; 
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        
+        border-top: 5px solid black;
+      }
+    }
+  }
+
+  &__row {
+    border: solid 1px #cccccc;
+    box-sizing: border-box;
+    background-color: white;
+    padding: 14px 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 8px;
+    color: #555555;
+    height: 64px;
+
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-auto-flow: column;
+    align-items: center;
+    grid-gap: 16px;
+
+    a {
+      grid-row: 1;
+      box-sizing: border-box;
+      overflow: hidden;
+      word-wrap: break-word;
+    }
+
+    &:hover {
+      background-color: #f4f6ff;
+      border: solid 1px #1a45ff;
+
+      //.component-table-actions {
+      //  visibility: visible !important;
+      //}
+    }
+  }
+}
+
+.component-table-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  visibility: visible;
+  
+
+  img {
+    cursor: pointer;
+  }
+}
